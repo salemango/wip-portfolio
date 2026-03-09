@@ -14,19 +14,22 @@
 </head>
 <body class="portfolio-page">
     
-    <header>
-        <h1>Portfolio</h1>
-    </header>
+    <div class="page-heading">
+        <header>
+            <h1>Portfolio</h1>
+        </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html" class="link-on">Portfolio</a></li>
-        </ul>
-            </nav>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="portfolio.html" class="link-on">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <section class="portfolio-scroll vertical-scroll">
-        <a href="https://salemango.github.io/weather-discovery-app/" target="_blank" rel="noopener">
+        <a href="project-pages/weather-discovery-app.html">
             <figure class="portfolio-image">
                 <picture>
                     <source media="(max-width: 1200px)" srcset="images/wda-tablet-home.webp">
@@ -39,7 +42,7 @@
             </figure>
         </a>
         
-        <a href="https://salemango.github.io/character-trait-builder/" target="_blank" rel="noopener">
+        <a href="project-pages/character-trait-builder.html">
             <figure class="portfolio-image">
                 <picture>
                     <source media="(max-width: 1200px)" srcset="images/ctb-tablet-filled-l.webp">
@@ -52,14 +55,14 @@
             </figure>
         </a>
         
-        <a href="https://salemango.github.io/pokemon-generator/" target="_blank" rel="noopener">
+        <a href="project-pages/pokemon-generator.html">
                 <figure class="portfolio-image">
                 <picture>
                     <source media="(max-width: 1200px)" srcset="images/pg-tablet.webp">
                     <img src="images/pg-desktop.webp" alt="pokemon generator app preview">
                 </picture>
                 <figcaption>
-                    <h3>Random Pokémon Generator</h3>
+                    <h3>Pokémon Generator</h3>
                     <p>March 2025</p>
                 </figcaption>
             </figure>
@@ -85,12 +88,30 @@
                     <img src="images/ac-spread.webp" alt="artconnect app preview">
                 </picture>
                 <figcaption>
-                    <h3>ArtConnect</h3>
+                    <h3>ArtConnect App Prototype</h3>
                     <p>May 2024</p>
                 </figcaption>
             </figure>
         </a>
     </section>
     
+    <footer class="contact-me">
+            <h2>Contact Me</h2>
+            <div class="contacts">
+                <div class="email">
+                    <img src="images/email-icon.svg" alt="email icon" class="email-icon">
+                    <a href="mailto:salemmangum@gmail.com" class="cta">salemmangum@gmail.com</a>
+                </div>
+
+                <div class="contact-links">
+                    <a href="https://github.com/salemango" target="_blank" rel="noopener"><img src="images/github-logo.svg" alt="GitHub icon" class="contact-icon"></a>
+                    <a href="https://www.linkedin.com/in/salem-mangum/" target="_blank" rel="noopener"><img src="images/linked-in-logo.svg" alt="LinkedIn icon" class="contact-icon"></a>
+                    <a href="https://waketech.joinhandshake.com/profiles/sarahmangum" target="_blank" rel="noopener"><img src="images/handshake-logo.svg" alt="Handshake icon" class="contact-icon"></a>
+                </div>
+            </div>
+
+            <img src="images/logo-white.png" alt="My logo" class="logo">
+        </footer>
+
 </body>
 </html>
