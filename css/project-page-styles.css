@@ -1,0 +1,189 @@
+
+/* General Styles ---------------------------------------------------- */
+body {
+    --background-color: #F4F0Ec;
+    --text-color-dark: #242124;
+    --text-color-light: #353839;
+    --blue-accent-dark: #369ed6;
+    --blue-accent-light: #83c8f0;
+    --yellow-accent: #fbec5d;
+
+    box-sizing: border-box;
+
+    text-align: left;
+    font-size: 20px;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    background-color: var(--blue-accent-dark);
+    color: var(--text-color-dark);
+    font-weight: bold;
+    text-align: left;
+    padding: 8px;
+}
+
+nav ul {
+    display: inline-block;
+}
+
+nav a {
+    color: var(--text-color-dark);
+}
+
+section {
+    margin: 32px 0px;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: bold;   
+    line-height: 36px;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+h2 {
+    padding-bottom: 8px;
+    font-size: 32px;
+}
+
+.project-overview img, .result img {
+    display: block;
+}
+
+p {
+    padding-left: 0px;
+}
+
+/* Specific Styles ---------------------------------------------------- */
+
+.project-hero {
+    height: 245px;
+    object-fit: cover;
+}
+
+.project-meta-description {
+    background-color: var(--text-color-dark);
+    color: var(--blue-accent-dark);
+    padding: 16px 32px;
+    
+}
+
+.project-meta-description ul {
+    list-style: none;
+}
+
+.project-meta-description ul li {
+    margin-bottom: 16px;
+}
+
+.project-meta-description ul li:last-child {
+    margin-bottom: 0;
+}
+
+.project-meta-description ul li p:first-child {
+    color: var(--blue-accent-light);
+    padding-bottom: 4px;
+    text-decoration-line: underline;
+}
+
+.project-meta-description a {
+    color: var(--yellow-accent);
+    text-decoration: none;
+}
+
+.project-meta-description a::after {
+    content: " ↗";
+    font-size: 14px;
+    vertical-align: top;
+}
+
+section:not(.project-overview) {
+    padding: 0 16px;
+}
+
+.project-problem p {
+    font-size: 20pt;
+}
+
+.solution p {
+    text-wrap: balance;
+    text-wrap: pretty;
+}
+
+.result-carousel {
+    display: flex;
+    gap: 16px;
+    width: calc(100vw - 32px);
+    overflow-x: scroll;
+}
+
+.result-carousel img {
+    width: 200px;
+    height: 355px;
+    object-fit: cover;    
+}
+
+.next-project {
+    text-align: right;
+}
+
+.next-project a {
+    color: var(--text-color-dark);
+    text-decoration: none;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20pt;
+}
+
+footer {
+    margin-top: 64px;
+}
+
+@media screen and (min-width: 768px) { /* Tablet and above */
+    
+    /* General styles */
+
+    nav {
+        padding: 8px;
+    }
+
+    nav ul a {
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 40px;
+        line-height: 60px;
+    }
+
+    .project-hero {
+        height: 448px;
+    }
+
+    .project-meta-description {
+        padding: 16px;
+    }
+
+    .project-meta-description ul {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .project-meta-description li:first-of-type {
+        max-width: 25%;
+    }
+
+    .project-meta-description li:nth-of-type(2) {
+        max-width: 50%;
+    }
+
+    .project-meta-description p {
+        padding: 0px;
+    }
+}
