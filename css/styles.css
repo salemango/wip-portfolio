@@ -1,0 +1,780 @@
+/* General Styles - All Pages ---------------------------------------------------- */
+
+body {
+    --background-color: #F4F0Ec;
+    --text-color-dark: #242124;
+    --text-color-light: #353839;
+    --blue-accent-dark: #369ed6;
+    --blue-accent-light: #83c8f0;
+    --yellow-accent: #fbec5d;
+
+    font-family: 'Work Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    background-color: var(--background-color);
+    background-attachment: fixed;
+    background-size: cover;
+
+    color: var(--text-color-light);
+    font-size: 14pt;
+
+    text-align: center;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.desktop-only {
+    display: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1 {
+    font-family: 'Gravitas One', 'Times New Roman', Times, serif;
+    color: var(--text-color-dark);
+    font-size: 50px;
+    line-height: 60px;
+    background-image: url("../images/grain-texture-black.webp");
+    background-color: rgb(from var(--text-color-dark) r g b / 0.25);
+    background-clip: text;
+    color: transparent;
+}
+
+h2,
+h3 {
+    font-family: 'Oswald', 'Arial Black', Arial, sans-serif;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 30px;
+
+    background-image: url("../images/grain-texture-black.webp");
+    background-clip: text;
+    color: transparent;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 24px;
+}
+
+h3 a {
+    text-decoration: none;
+    color: var(--text-color-light);
+}
+
+h4 {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 10px 0;
+}
+
+p {
+    padding: 0 10px;
+    text-wrap: balance;
+}
+
+/* Footer styles (all pages) ---------------------------------------------------- */
+
+footer {
+    background-color: var(--blue-accent-dark);
+    padding: 20px;
+    text-align: center;
+}
+
+.email {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+img.email-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 3px;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: none;
+}
+
+.email a {
+    background-color: var(--background-color);
+    line-height: 45px;
+    padding: 0 10px;
+    text-decoration: none;
+    color: var(--text-color-dark);
+}
+
+.logo {
+    width: 96px;
+    padding-top: 20px;
+}
+
+/* Home / Landing Page Styles ---------------------------------------------------- */
+
+.scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    scroll-snap-type: y mandatory;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.scroll-section-1,
+.scroll-section-2 {
+    scroll-snap-align: start start;
+}
+
+.horizontal-scroll,
+.horizontal-vertical-scroll,
+.vertical-scroll {
+    scrollbar-width: none;
+    /* for modern browsers */
+}
+
+.horizontal-scroll,
+.horizontal-vertical-scroll {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+}
+
+.project-preview {
+    display: flex;
+    gap: 40px;
+    padding: 20px 5px;
+    overflow-x: scroll;
+    scrollbar-width: none;
+}
+
+.horizontal-scroll::-webkit-scrollbar,
+.horizontal-vertical-scroll::-webkit-scrollbar,
+.vertical-scroll::-webkit-scrollbar {
+    /* for older browsers */
+    display: none;
+    -webkit-appearance: none;
+}
+
+.project-preview::-webkit-scrollbar {
+    display: none;
+    -webkit-appearance: none;
+}
+
+.project-preview img {
+    width: 66%;
+    scroll-snap-align: center;
+
+    box-shadow: rgb(from var(--text-color-dark) r g b / 0.15) 0px 0px 5px;
+}
+
+.home-header {
+    background-color: var(--background-color);
+    background-size: 20px 20px;
+    background-image:
+        linear-gradient(to right, var(--blue-accent-light) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--blue-accent-light) 1px, transparent 1px);
+    border-bottom: 1px solid var(--blue-accent-light);
+}
+
+.intro {
+    background-color: var(--blue-accent-dark);
+    text-align: center;
+    text-wrap: balance;
+    margin: 20px 0;
+    padding: 40px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+button {
+    border: none;
+    padding: 10px 20px;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+button.cta {
+    background-image: url("../images/grain-texture-black.webp");
+    background-color: rgb(from var(--text-color-dark) r g b / 0.8);   
+}
+
+.cta a {
+    text-decoration: none;
+    color: var(--yellow-accent);
+}
+
+.cta h2 {
+    color: var(--yellow-accent);
+}
+
+img.contact-icon {
+    width: 50px;
+    height: 50px;
+    -webkit-mask-image: url("../images/grain-texture-black.webp");
+    mask-image: url("../images/grain-texture-black.webp");
+}
+
+.scroll-section-2 {
+    padding-top: 20px;
+}
+
+.scroll-section-2 section {
+    margin-bottom: 50px;
+}
+
+.scroll-section-2 h2 {
+    margin-bottom: 20px;
+}
+
+.tech-list {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 10px;
+}
+
+.tech-list li {
+    margin: 5px;
+    padding: 5px 10px;
+}
+
+.languages-and-frameworks-tech-list.tech-list li {
+    background: var(--blue-accent-light);
+}
+
+.tech-list li.mid {
+    background: rgb(from var(--blue-accent-light) r g b / 0.66);
+}
+
+.tech-list li.low {
+    background: rgb(from var(--blue-accent-light) r g b / 0.33);
+}
+
+.design-tech-list.tech-list li {
+    background: var(--yellow-accent);
+}
+
+.design-tech-list.tech-list li.mid {
+    background: rgb(from var(--yellow-accent) r g b / 0.66);
+}
+
+.design-tech-list.tech-list li.low {
+    background: rgb(from var(--yellow-accent) r g b / 0.33);
+}
+
+/* Portfolio Page Styles ---------------------------------------------------- */
+
+.page-heading {
+    background-color: var(--blue-accent-dark);
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav ul li::after {
+    content: "•";
+    padding: 10px;
+    color: var(--text-color-light);
+}
+
+nav ul li:last-of-type::after {
+    content: "";
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color-light);
+    font-size: 24px;
+    display: inline-block;
+}
+
+nav a.link-on {
+    color: var(--text-color-dark);
+    font-weight: bold;
+}
+
+.portfolio-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 40px 2.5%;
+    scrollbar-width: none;
+}
+
+.portfolio-scroll::-webkit-scrollbar {
+    width: none;
+    display: none;
+    --webkit-appearance: none;
+}
+
+.portfolio-scroll a {
+    width: 80%;
+}
+
+figure {
+    background-color: white;
+    width: 100%;
+    display: block;
+    box-shadow: 0 0 5px rgb(from var(--text-color-dark) r g b / 0.25);
+    border-bottom: 1px solid rgb(from var(--text-color-dark) r g b / 0.25);
+    box-sizing: border-box;
+}
+
+figure img {
+    border: 1px solid rgb(from var(--text-color-dark) r g b / 0.15);
+}
+
+.portfolio-scroll a:nth-of-type(even) {
+    align-self: flex-end;
+}
+
+figcaption {
+    padding: 10px;
+    text-align: right;
+}
+
+figcaption p {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.portfolio-scroll a:nth-of-type(even) figcaption {
+    text-align: left;
+}
+
+.portfolio-scroll a {
+    text-decoration: none;
+}
+
+.portfolio-scroll p {
+    color: var(--text-color-light);
+}
+
+figcaption h3 {
+    margin-bottom: 10px;
+}
+
+/* Resume Page Styles ---------------------------------------------------- */
+
+div.resume {
+    height: fit-content;
+    overflow-y: scroll;
+    margin: 40px auto;
+}
+
+button.resume-download {
+    background-color: var(--yellow-accent);
+    cursor: pointer;
+    margin-bottom: 40px;
+}
+
+button.resume-download a {
+    color: var(--text-color-dark);
+    text-decoration: none;
+    font-family: 'Work Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 24px;
+    font-weight: bold;
+} 
+
+@media screen and (max-height: 670px)
+/* iPhone SE styles ------------------------------------ */
+    {
+    /* Home Page Styles ---------------------------------------------------- */
+
+    .project-preview {
+        padding: 10px 5px;
+        gap: 20px;
+    }
+
+    .project-preview img {
+        width: 50%;
+        border-width: 3px;
+    }
+
+    .intro {
+        margin: 10px 0;
+        padding: 20px 0;
+    }
+
+    /* Portfolio Page Styles ---------------------------------------------------- */
+}
+
+
+@media screen and (min-width: 768px) {
+    /* Tablet Styles ------------------------------------ */
+
+    /* General Styles ---------------------------------------------------- */
+
+    body {
+        font-size: 18pt;
+    }
+
+    h1 {
+        font-size: 90px;
+        line-height: 95px;
+    }
+
+    h2 {
+        font-size: 48px;
+        line-height: 48px;
+    }
+
+    h3 {
+        font-size: 32pt;
+        line-height: 32pt;
+    }
+
+    h4 {
+        font-size: 26px;
+    }
+
+    button {
+        padding: 15px 30px;
+    }
+
+    p {
+        padding: 0px 20px;
+        text-wrap: balance;
+        text-wrap: pretty;
+        line-height: 1.25em;
+    }
+
+    /* Footer styles (all pages) ---------------------------------------------------- */
+
+    img.email-icon {
+        height: 60px;
+        width: 60px;
+    }
+
+    .email a {
+        line-height: 60px;
+    }
+
+    img.contact-icon {
+        width: 70px;
+        height: 70px;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 128px;
+    }
+
+    /* Home Page Styles ---------------------------------------------------- */
+
+    .project-preview {
+        gap: 20px;
+    }
+
+    .project-preview img {
+        width: 45%;
+    }
+
+    .intro {
+        gap: 40px;
+    }
+
+    .scroll-section-2 section {
+        padding: 20px;
+        margin-bottom: 60px;
+    }
+
+    .scroll-section-2 h2 {
+        margin-bottom: 20px;
+    }
+
+    /* Portfolio Page Styles ---------------------------------------------------- */
+
+    .page-heading {
+        padding: 20px;
+    }
+
+    .portfolio-scroll {
+        margin: 64px 2.5%;
+    }
+
+    .portfolio-scroll a {
+        width: 66%;
+    }
+
+    div.resume {
+        margin: 60px auto;
+    }
+
+    button.resume-download {
+        margin-bottom: 60px;
+    }
+
+    .resume object {
+        height: 80vw;
+
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    /* MacBook & Desktop Styles -------------------------- */
+
+    /* General Styles ---------------------------------------------------- */
+
+    .desktop-only {
+        display: block;
+    }
+
+    body {
+        text-align: left;
+    }
+
+    h1 {
+        font-size: 110px;
+        line-height: 120px;
+    }
+
+    button {
+        padding: 10px 20px;
+        margin: 0;
+    }
+
+    p {
+        width: 60%;
+        padding-left: 0;
+    }
+
+    /* Footer styles (all pages) ---------------------------------------------------- */
+
+    .logo {
+        width: 15%;
+    }
+
+    .contacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
+
+    img.email-icon {
+        width: 70px;
+        height: 70px;
+    }
+
+    .email a {
+        line-height: 70px;
+    }
+
+    .contact-links {
+        height: 70px;
+        align-items: center;
+    }
+
+    img.contact-icon {
+        padding: 0px 10px;
+    }
+
+    footer {
+        text-align: center;
+    }
+
+    /* Home Page Styles ---------------------------------------------------- */
+
+    .home-header {
+        display: grid;
+        grid-template-columns: 2fr 1.5fr;
+        max-height: 100vh;
+    }
+
+    .cta h2 {
+        font-size: 36px;
+    }
+
+    .project-preview {
+        flex-direction: column;
+        gap: 40px;
+        max-height: 95vh;
+        overflow-y: scroll;
+        padding-left: 20%;
+    }
+
+    .home-header .project-preview:first-of-type {
+        display: none;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    .project-preview img {
+        width: 100%;
+    }
+
+    .home-header {
+        background-color: var(--background-color);
+        background-size: 40px 40px;
+        height: 100vh;
+    }
+
+    .intro {
+        margin: 0;
+        padding: 0 20px;
+        padding-bottom: 60px;
+        align-items: flex-start;
+        justify-content: flex-end;
+        text-align: left;
+    }
+
+    .scroll-section-2 h4,
+    .scroll-section-2 p,
+    .scroll-section-2 .tech-list {
+        padding-left: 20px;
+    }
+
+    .desktop-grid {
+        display: grid;
+        grid-template-columns: 4fr 6fr;
+        gap: 20px;
+    }
+
+    .landing-page-collage-images {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .landing-page-collage {
+        width: 480px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 0px;
+    }
+
+    .landing-page-collage img {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        box-shadow: 0px 0px 5px rgb(from var(--text-color-dark) r g b / 0.25);
+        border: 3px solid var(--background-color);
+    }
+
+    .landing-page-collage img:first-of-type {
+        width: 480px;
+        height: 550px;
+    }
+
+    .landing-page-collage img:nth-child(2) {
+        width: 225px;
+        height: 300px;
+        z-index: 3;
+        transform: rotate(-15deg) translateY(-100px);
+    }
+
+    .landing-page-collage img:last-of-type {
+        width: 225px;
+        height: 225px;
+        z-index: 2;
+        transform: translateY(-150px) translateX(50px);
+    }
+
+    .scroll-section-2 p {
+        width: 100%;
+    }
+
+    .tech-list {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    /* Portfolio Page Styles ---------------------------------------------------- */
+
+    figure {
+        width: fit-content;
+    }
+
+    figure img {
+        display: block;
+    }
+
+    .portfolio-scroll {
+        margin: inherit 1.5%;
+        margin-top: 32px;
+    }
+
+    figcaption {
+        text-align: right;
+        padding: 16px;
+    }
+
+    figcaption p {
+        width: 100%;
+    }
+
+    /* Resume styles ---------------------------------------------------- */
+
+    .resume object {
+        height: 500px;
+        width: 800px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    button.resume-download {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 60px;
+    }
+
+}
+
+@media screen and (min-width: 1900px) {
+    /* Large Desktop Styles -------------------------- */
+
+    /* Home Page Styles ---------------------------------------------------- */
+
+    .scroll-section-2 p {
+        width: 100%;
+    }
+
+    .scroll-section-2 section.landing-page-collage-images {
+        padding: 0px;
+    }
+
+    .landing-page-collage img:nth-child(2) {
+        transform: rotate(-15deg) translateY(-150px);
+    }
+
+    div.resume {
+        margin: 2% auto;
+    }
+
+    .resume object {
+        width: 1000px;
+        height: 600px;
+    }
+}
