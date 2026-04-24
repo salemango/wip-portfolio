@@ -1,0 +1,166 @@
+body {
+    --background-color: #F4F0Ec;
+    --text-color-dark: #242124;
+    --text-color-light: #353839;
+    --blue-accent-dark: #369ed6;
+    --blue-accent-light: #83c8f0;
+    --yellow-accent: #fbec5d;
+
+    background-image: 
+        linear-gradient(to right, rgb(from var(--blue-accent-light) r g b / .6) 1px, transparent 1px),
+        linear-gradient(to bottom, rgb(from var(--blue-accent-light) r g b / .6) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.page-heading {
+    background-color: hsl(from var(--blue-accent-dark) h s calc(l + 10));  
+}
+
+h1 {
+    font-weight: normal;
+    padding: 10px 0px;
+}
+
+nav {
+    background-color: var(--blue-accent-dark);
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: center;
+}
+
+nav ul li::after {
+    content: "•";
+    padding: 10px;
+    color: var(--text-color-light);
+}
+
+nav ul li:last-of-type::after {
+    content: "";
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color-light);
+    font-size: 24px;
+    display: inline-block;
+}
+
+nav a.link-on {
+    color: var(--text-color-dark);
+    font-weight: bold;
+    font-style: italic;
+}
+
+.portfolio-scroll {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    margin: 40px 2.5%;
+    scrollbar-width: none;
+}
+
+.portfolio-scroll::-webkit-scrollbar {
+    width: none;
+    display: none;
+    --webkit-appearance: none;
+}
+
+.portfolio-scroll a {
+    width: 80%;
+}
+
+figure {
+    background-color: white;
+    width: 100%;
+    display: block;
+    box-shadow: 0 0 5px rgb(from var(--text-color-dark) r g b / 0.25);
+    border-bottom: 1px solid rgb(from var(--text-color-dark) r g b / 0.25);
+    box-sizing: border-box;
+}
+
+figure img {
+    border: 1px solid rgb(from var(--text-color-dark) r g b / 0.15);
+}
+
+.portfolio-scroll a:nth-of-type(even) {
+    align-self: flex-end;
+}
+
+figcaption {
+    padding: 10px;
+    text-align: right;
+}
+
+figcaption p {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.portfolio-scroll a:nth-of-type(even) figcaption {
+    text-align: left;
+}
+
+.portfolio-scroll a {
+    text-decoration: none;
+}
+
+.portfolio-scroll p {
+    color: var(--text-color-light);
+}
+
+figcaption h3 {
+    margin-bottom: 10px;
+}
+
+@media screen and (max-height: 670px) { /*iPhone SE */
+    /* Add styles if necessary */
+
+}
+
+@media screen and (min-width: 768px) { /* Tablet and above */
+    
+
+    h1 {
+        padding: 10px;
+    }
+
+    .portfolio-scroll {
+        margin: 64px 2.5%;
+    }
+
+    .portfolio-scroll a {
+        width: 66%;
+    }
+}
+
+@media screen and (min-width: 1400px) /* Macbook and (most) Desktop styles */ {
+
+    figure {
+        width: fit-content;
+    }
+
+    figure img {
+        display: block;
+    }
+
+    .portfolio-scroll {
+        margin: inherit 1.5%;
+        margin-top: 32px;
+    }
+
+    figcaption {
+        text-align: right;
+        padding: 16px;
+    }
+
+    figcaption p {
+        width: 100%;
+    }
+
+}

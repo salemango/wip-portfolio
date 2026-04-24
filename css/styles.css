@@ -128,7 +128,7 @@ img.email-icon {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    scroll-snap-type: y mandatory;
+
     height: 100vh;
     overflow-y: scroll;
 }
@@ -227,8 +227,6 @@ button.cta {
 img.contact-icon {
     width: 50px;
     height: 50px;
-    -webkit-mask-image: url("../images/grain-texture-black.webp");
-    mask-image: url("../images/grain-texture-black.webp");
 }
 
 .scroll-section-2 {
@@ -284,101 +282,7 @@ img.contact-icon {
 
 /* Portfolio Page Styles ---------------------------------------------------- */
 
-.page-heading {
-    background-color: var(--blue-accent-dark);
-    padding: 10px;
-}
 
-nav ul {
-    display: flex;
-    list-style-type: none;
-    flex-direction: row;
-    justify-content: center;
-}
-
-nav ul li::after {
-    content: "•";
-    padding: 10px;
-    color: var(--text-color-light);
-}
-
-nav ul li:last-of-type::after {
-    content: "";
-    padding: 0;
-}
-
-nav a {
-    text-decoration: none;
-    color: var(--text-color-light);
-    font-size: 24px;
-    display: inline-block;
-}
-
-nav a.link-on {
-    color: var(--text-color-dark);
-    font-weight: bold;
-}
-
-.portfolio-scroll {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    margin: 40px 2.5%;
-    scrollbar-width: none;
-}
-
-.portfolio-scroll::-webkit-scrollbar {
-    width: none;
-    display: none;
-    --webkit-appearance: none;
-}
-
-.portfolio-scroll a {
-    width: 80%;
-}
-
-figure {
-    background-color: white;
-    width: 100%;
-    display: block;
-    box-shadow: 0 0 5px rgb(from var(--text-color-dark) r g b / 0.25);
-    border-bottom: 1px solid rgb(from var(--text-color-dark) r g b / 0.25);
-    box-sizing: border-box;
-}
-
-figure img {
-    border: 1px solid rgb(from var(--text-color-dark) r g b / 0.15);
-}
-
-.portfolio-scroll a:nth-of-type(even) {
-    align-self: flex-end;
-}
-
-figcaption {
-    padding: 10px;
-    text-align: right;
-}
-
-figcaption p {
-    padding-left: 0;
-    padding-right: 0;
-}
-
-.portfolio-scroll a:nth-of-type(even) figcaption {
-    text-align: left;
-}
-
-.portfolio-scroll a {
-    text-decoration: none;
-}
-
-.portfolio-scroll p {
-    color: var(--text-color-light);
-}
-
-figcaption h3 {
-    margin-bottom: 10px;
-}
 
 /* Resume Page Styles ---------------------------------------------------- */
 
@@ -509,20 +413,7 @@ button.resume-download a {
         margin-bottom: 20px;
     }
 
-    /* Portfolio Page Styles ---------------------------------------------------- */
-
-    .page-heading {
-        padding: 20px;
-    }
-
-    .portfolio-scroll {
-        margin: 64px 2.5%;
-    }
-
-    .portfolio-scroll a {
-        width: 66%;
-    }
-
+    /* Resume Page Styles ---------------------------------------------------- */
     div.resume {
         margin: 60px auto;
     }
@@ -713,27 +604,7 @@ button.resume-download a {
 
     /* Portfolio Page Styles ---------------------------------------------------- */
 
-    figure {
-        width: fit-content;
-    }
-
-    figure img {
-        display: block;
-    }
-
-    .portfolio-scroll {
-        margin: inherit 1.5%;
-        margin-top: 32px;
-    }
-
-    figcaption {
-        text-align: right;
-        padding: 16px;
-    }
-
-    figcaption p {
-        width: 100%;
-    }
+    
 
     /* Resume styles ---------------------------------------------------- */
 
